@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block title %} MSCricKnowledge | Elite Bowlers List {% endblock %}
+
+{% block body %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-4">
+            <img class="img-responsive player-pics1" src="../static/media/eliteBowlers1.jpg" alt="Bowlers">
+        </div>
+        <div class="col-8">
+            <img class="img-responsive player-pics2" src="../static/media/eliteBowlers2.jpg" alt="Bowlers">
+        </div>
+    </div>
+    <h3 class="text-center">Our chosen Elite Bowlers of current cricket</h3>
+</div>
+<div class="container">
+    <p class="lead">These ae some of the finest bowlers in world cricket right now. This list obviously includes The Big Boys in Bowling. Hope you like the list below: Click on any player to explore more about him.</p>
+    <hr>
+    <hr>
+    <ul>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Rankings</th>
+                </tr>
+            </thead>
+            {% for player in stats %}
+
+            <tbody>
+                <tr>
+                    <th scope="row">{{ loop.index }}</th>
+                    <td><a class="navbar-brand" href="/statsEliteBowlers/{{player.id}}">{{ player.name }}</a></td>
+                    <td><b>{{ player.ranking }}</b></td>
+                </tr>
+            </tbody>
+            
+            {% endfor %}
+        </table>
+    </ul>
+    <div class="conatiner">
+        <a href="/" type="button" class="btn btn-primary my-2" >BACK</a>
+    </div>
+</div>
+
+{% endblock %}

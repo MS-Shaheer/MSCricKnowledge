@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block title %} MSCricKnowledge | About {% endblock %}
+
+{% block body %}
+
+<div class="container-fluid">
+    <div id="carouselExampleDark" class="carousel carousel-light slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Contact Us"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                aria-label="Facebook"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                aria-label="Twitter"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+                <img src="../static/media/contactImage1.jpg" class="d-block w-100 contact-pics" alt="Contact us image">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>CONTACT US THROUGH</h5>
+                    <p>You can contact us through -></p>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="../static/media/contactImage2.jpg" class="d-block w-100 contact-pics" alt="Contact us image">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Facebook</h5>
+                    <a class="text-muted" href="https://web.facebook.com/shamie.shaheer" target="_blank"><i class="fa-brands fa-square-twitter fa-beat"></i></a>
+                    <p>On facebook we typically reply in 1 hour.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="../static/media/contactImage3.jpg" class="d-block w-100 contact-pics" alt="Contact us image">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Twitter</h5>
+                    <li class="ms-3"><a class="text-muted" href="https://twitter.com/IamMS_18" target="_blank"><i class="fa-brands fa-twitter fa-beat"></i></a></li>
+                    <p>On twitter we typically reply in 30 minutes.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <div class="container my-2">
+        <h5 class="text-center my-2">We keep the numbers up and running. Stats make sports exciting and we know it !!!
+        </h5>
+        <p class="lead">
+            Welcome to my contact page! I'm glad you stopped by. If you need to get in touch with me for any reason, whether it's to ask a question, share feedback, or discuss a potential collaboration, this is the place to do it. You can fill out the form provided, and I will receive your message via email. I will do my best to respond to your inquiry as soon as possible. Alternatively, you can also reach me through my social media accounts, which are linked below. Thank you for visiting, and I look forward to hearing from you!
+        </p>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block title %} MSCricKnowledge | Elite Batters List {% endblock %}
+
+{% block body %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-4">
+            <img class="img-responsive player-pics1" src="../static/media/eliteBatters1.jpg"
+                alt="Babar and Kohli together">
+        </div>
+        <div class="col-8">
+            <img class="img-responsive player-pics2" src="../static/media/eliteBatters2.jpg"
+                alt="Babar and Kohli together">
+        </div>
+    </div>
+    <h3 class="text-center">Our chosen Elite Batters of current cricket</h3>
+</div>
+<div class="container">
+    <p class="lead">These ae some of the finest batters in world cricket right now. This list obviously includes The Big
+        Four plus One as well. Hope you like the list below: Click on any player to explore more about him.</p>
+    <hr>
+    <hr>
+    <ul>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Rankings</th>
+                </tr>
+            </thead>
+            {% for player in stats %}
+
+            <tbody>
+                <tr>
+                    <th scope="row">{{ loop.index }}</th>
+                    <td><a class="navbar-brand" href="/statsEliteBatters/{{player.id}}">{{ player.name }}</a></td>
+                    <td><b>{{ player.ranking }}</b></td>
+                </tr>
+            </tbody>
+            
+            {% endfor %}
+        </table>
+    </ul>
+    <div class="conatiner">
+        <a href="/" type="button" class="btn btn-primary my-2" >BACK</a>
+    </div>
+</div>
+
+{% endblock %}

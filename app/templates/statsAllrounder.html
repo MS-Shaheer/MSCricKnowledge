@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+
+{% block title %} MSCricKnowledge | Elite Allrounders List {% endblock %}
+
+{% block body %}
+
+<div class="container-fluid">
+    <div id="carouselExampleDark" class="carousel carousel-light slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Imran Khan"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                aria-label="Gary Sobers"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                aria-label="Kapil Dev"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+                <img src="../static/media/ar1.jpg" class="d-block w-100 contact-pics" alt="Imran Khan Picture">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Imran Khan</h5>
+                    <b>The King Kaptaan !!!</b>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="../static/media/ar2.jpg" class="d-block w-100 contact-pics" alt="Gary Sobers Picture">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Gary Sobers</h5>
+                    <p>The most beautiful no.6 for any team !!!/p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="../static/media/ar3.jpg" class="d-block w-100 contact-pics" alt="Shane Warne Picture">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Kapil Dev</h5>
+                    <b>One of India's Finest Captain !!!</b>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <div class="container my-2">
+        <h3 class="text-center my-2">{{ stats.name }}  --- {{stats.ranking}} </h3>
+        <p class="lead">
+            
+        </p>
+        <ul class="list-group">
+            <li class="list-group-item">Country: {{stats.country}}</li>
+        </ul>
+        <ul class="list-group">
+            <li class="list-group-item">Matches: {{stats.matches}}</li>
+        </ul>
+        <ul class="list-group">
+            <li class="list-group-item">Runs: {{stats.wickets}}</li>
+        </ul>
+        <ul class="list-group">
+            <li class="list-group-item">Batting Average: {{stats.batting_avg}}</li>
+        </ul>
+        <ul class="list-group">
+            <li class="list-group-item">Wickets: {{stats.wickets}}</li>
+        </ul>
+        <ul class="list-group">
+            <li class="list-group-item">Bowling Average: {{stats.bowling_avg}}</li>
+        </ul>
+        <ul class="list-group">
+            <li class="list-group-item">100s: {{stats.centuries}}</li>
+        </ul>
+        <ul class="list-group">
+            <li class="list-group-item">50s: {{stats.fifties}}</li>
+        </ul>
+    </div>
+    <div class="conatiner">
+        <a href="/statsEliteBatters" type="button" class="btn btn-primary my-2" >Elite Batters</a>
+    </div>
+    <div class="conatiner">
+        <a href="/statsEliteBowlers" type="button" class="btn btn-primary my-2" >Elite Bowlers</a>
+    </div>
+    <div class="conatiner">
+        <a href="/statsEliteAllrounders" type="button" class="btn btn-primary my-2" >BACK</a>
+    </div>
+</div>
+
+{% endblock %}

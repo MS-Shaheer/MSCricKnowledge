@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block title %} MSCricKnowledge | Articles {% endblock %}
+
+{% block body %}
+
+<div class="container-fluid">
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Wasim Akram"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                aria-label="Glenn Mcgrath"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                aria-label="Shane Warne"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+                <img src="../static/media/article1.jpg" class="d-block w-100 contact-pics" alt="Article Writing">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Wasim Akram</h5>
+                    <b>We write to make it exciting read !!!</b>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="../static/media/article2.jpg" class="d-block w-100 contact-pics" alt="Article Writing">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Write with perfection !</h5>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <div class="container my-2">
+        <h3>{{article.name}}</h3>
+        <hr>
+        <span>{{article.views}}</span>
+        <hr>
+        <span>{{article.date_published}}</span>
+        <hr>
+        <p>{{article.description}}</p>
+        <hr><hr>
+        <b>~ {{article.author}}</b>
+    </div>
+    <div class="conatiner">
+        <a href="/articles" type="button" class="btn btn-primary my-2" >BACK</a>
+    </div>
+</div>
+
+{% endblock %}

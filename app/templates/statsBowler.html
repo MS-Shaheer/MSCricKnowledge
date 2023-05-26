@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+
+{% block title %} MSCricKnowledge | Elite Bowlers List {% endblock %}
+
+{% block body %}
+
+<div class="container-fluid">
+    <div id="carouselExampleDark" class="carousel carousel-light slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Wasim Akram"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                aria-label="Glenn Mcgrath"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                aria-label="Shane Warne"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+                <img src="../static/media/ebo1.jpg" class="d-block w-100 contact-pics" alt="Wasim Akram Picture">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Wasim Akram</h5>
+                    <b>The Sultan of Swing !!!</b>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="../static/media/ebo2.jpg" class="d-block w-100 contact-pics" alt="Glenn Mcgrath Picture">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Glenn Mcgrath</h5>
+                    <p>Mr. Accurate !!!/p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="../static/media/ebo3.jpg" class="d-block w-100 contact-pics" alt="Shane Warne Picture">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Shane Warne</h5>
+                    <b>The meaning of SPIN !!!</b>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <div class="container my-2">
+        <h3 class="text-center my-2">{{ stats.name }}  --- {{stats.ranking}} </h3>
+        <p class="lead">
+            
+        </p>
+        <ul class="list-group">
+            <li class="list-group-item">Country: {{stats.country}}</li>
+        </ul>
+        <ul class="list-group">
+            <li class="list-group-item">Matches: {{stats.matches}}</li>
+        </ul>
+        <ul class="list-group">
+            <li class="list-group-item">Innings: {{stats.innings}}</li>
+        </ul>
+        <ul class="list-group">
+            <li class="list-group-item">Wickets: {{stats.wickets}}</li>
+        </ul>
+        <ul class="list-group">
+            <li class="list-group-item">Average: {{stats.average}}</li>
+        </ul>
+        <ul class="list-group">
+            <li class="list-group-item">Strike Rate: {{stats.sr}}</li>
+        </ul>
+        <ul class="list-group">
+            <li class="list-group-item">Economy: {{stats.econ}}</li>
+        </ul>
+        <ul class="list-group">
+            <li class="list-group-item">Best: {{stats.best_figure}}</li>
+        </ul>
+        <ul class="list-group">
+            <li class="list-group-item">5ers: {{stats.five_wkt_hauls}}</li>
+        </ul>
+    </div>
+    <div class="conatiner">
+        <a href="/statsEliteBatters" type="button" class="btn btn-primary my-2" >Elite Batters</a>
+    </div>
+    <div class="conatiner">
+        <a href="/statsEliteAllrounders" type="button" class="btn btn-primary my-2" >Elite Allrounders</a>
+    </div>
+    <div class="conatiner">
+        <a href="/statsEliteBowlers" type="button" class="btn btn-primary my-2" >Back</a>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block title %} MSCricKnowledge | Elite Allrounders List {% endblock %}
+
+{% block body %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-4">
+            <img class="img-responsive player-pics1" src="../static/media/eliteARs1.jpg" alt="Allrounders">
+        </div>
+        <div class="col-8">
+            <img class="img-responsive player-pics2" src="../static/media/eliteARs2.jpg" alt="Allrounders">
+        </div>
+    </div>
+    <h3 class="text-center">Our chosen Elite Allrounders of current cricket</h3>
+</div>
+<div class="container">
+    <p class="lead">These ae some of the finest all-rounders in world cricket right now. This list obviously includes The Big Boys with all-round abilities. Hope you like the list below: Click on any player to explore more about him.</p>
+    <hr>
+    <hr>
+    <ul>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Rankings</th>
+                </tr>
+            </thead>
+            {% for player in stats %}
+
+            <tbody>
+                <tr>
+                    <th scope="row">{{ loop.index }}</th>
+                    <td><a class="navbar-brand" href="/statsEliteAllrounders/{{player.id}}">{{ player.name }}</a></td>
+                    <td><b>{{ player.ranking }}</b></td>
+                </tr>
+            </tbody>
+            
+            {% endfor %}
+        </table>
+    </ul>
+    <div class="conatiner">
+        <a href="/" type="button" class="btn btn-primary my-2" >BACK</a>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+
+{% block title %} MSCricKnowledge | Home {% endblock %}
+
+{% block body %}
+
+<div class="container-fluid text-center">
+    <h5>Cricket - The game of Gentlemen</h5>
+    <img class="page-pic img-responsive" src="../static/media/cricketHomepage.jpg" alt="Homepage Picture">
+</div>
+
+<div class="container-fluid my-4 bodyHome">
+    <p>
+        Cricket is one of many games in the "club ball" sphere that basically involve hitting a ball with a hand-held
+        implement; others include baseball (which shares many similarities with cricket, both belonging in the more
+        specific bat-and-ball games category), golf, hockey, tennis, squash, badminton and table tennis.In cricket's
+        case, a key difference is the existence of a solid target structure, the wicket (originally, it is thought, a
+        "wicket gate" through which sheep were herded), that the batter must defend.The cricket historian Harry Altham
+        identified three "groups" of "club ball" games: the "hockey group", in which the ball is driven to and from
+        between two targets (the goals); the "golf group", in which the ball is driven towards an undefended target (the
+        hole); and the "cricket group", in which "the ball is aimed at a mark (the wicket) and driven away from it".
+    </p>
+    <p>
+        It is generally believed that cricket originated as a children's game in the south-eastern counties of England,
+        sometime during the medieval period.Although there are claims for prior dates, the earliest definite reference
+        to cricket being played comes from evidence given at a court case in Guildford in January 1597 (Old Style,
+        equating to January 1598 in the modern calendar). The case concerned ownership of a certain plot of land and the
+        court heard the testimony of a 59-year-old coroner, John Derrick, who gave witness that.
+    </p>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <h5 class="text-center stats">Stats</h5>
+                <ul>
+                    <li><a class="navbar-brand" href="/statsEliteBatters">Current Elite Batters</a></li>
+                    <li><a class="navbar-brand" href="/statsEliteBowlers">Current Elite Bowlers</a></li>
+                    <li><a class="navbar-brand" href="/statsEliteAllrounders">Current Elite Allrounders</a></li>
+                </ul>
+            </div>
+            <div class="col-8">
+                <h5 class="text-center articles">Articles</h5>
+                <ul>
+                    <li><a class="navbar-brand" href="/articles">Babar Azam: The best batter of last decade in Pakistan
+                            Cricket</a></li>
+                    <li><a class="navbar-brand" href="/articles">Kohli: The Kohinoor of Cricket</a></li>
+                    <li><a class="navbar-brand" href="/articles">Pakistan Cricket: Sometimes a joke, Sometimes a Miracle</a>
+                    </li>
+                    <li><a class="navbar-brand" href="/articles">Imran Khan: The best ever for Pakistan</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="vh-30" style="background-color: rgb(228, 242, 232);">
+    <div class="container py-5 h-100">
+        <div class="row d-flex align-items-center h-100">
+            <div class="col col-lg-6 mb-4 mb-lg-0">
+                <figure class="text-center bg-white py-5 px-4 shadow-2" style="border-radius: .75rem;">
+                    <i class="far fa-gem fa-lg mb-4" style="color: #be7a4f;"></i>
+                    <blockquote class="blockquote pb-2">
+                        <p>
+                            <i class="fas fa-angle-double-left" style="color: #955126;"></i>
+                            <span class="lead font-italic">You don't play for the crowd, you play for the
+                                country.</span>
+                            <i class="fas fa-angle-double-right" style="color: #967b6a;"></i>
+                        </p>
+                    </blockquote>
+                    <figcaption class="blockquote-footer mb-0 font-italic">
+                        Mahendra Singh Dhoni
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="col col-lg-6">
+                <figure class="text-center bg-white py-5 px-4 shadow-2" style="border-radius: .75rem;">
+                    <i class="far fa-gem fa-lg mb-4" style="color: #c28d47;"></i>
+                    <blockquote class="blockquote pb-2">
+                        <p>
+                            <i class="fas fa-angle-double-left" style="color: #be7a4f;"></i>
+                            <span class="lead font-italic">Compromise for your dreams but never compromise on your
+                                dreams.</span>
+                            <i class="fas fa-angle-double-right" style="color: #955126;"></i>
+                        </p>
+                    </blockquote>
+                    <figcaption class="blockquote-footer mb-0 font-italic">
+                        Imran Khan
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,50 @@
+.titleHeading {
+    padding-right: 330px;
+    color: maroon;
+}
+
+body {
+    color: #ebf1f7;
+}
+
+p {
+    font-family: helvetica;
+    font-weight: 400;
+}
+
+.bodyHome {
+    background-color: rgb(228, 242, 232);
+}
+
+.stats{
+    padding-right: 100px;
+}
+
+.page-pic {
+    width: 100%;
+    object-fit: cover;
+    height: 350px;
+}
+
+.articles{
+    padding-right: 150px;
+}
+
+li {
+    list-style-type: none;
+}
+
+.contact-pics {
+    height: 400px;
+}
+
+.player-pics1 {
+    width: 520px;
+    height: 400px;
+}
+
+.player-pics2 {
+    width: 760px;
+    height: 400px;
+    margin-left: 100px;
+}

@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block title %} MSCricKnowledge | Articles List {% endblock %}
+
+{% block body %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-4">
+            <img class="img-responsive player-pics1" src="../static/media/article1.jpg" alt="Article Writing">
+        </div>
+        <div class="col-8">
+            <img class="img-responsive player-pics2" src="../static/media/article2.jpg" alt="Article Writing">
+        </div>
+    </div>
+    <h3 class="text-center">Our Features Articles for the month !!!</h3>
+</div>
+<div class="container">
+    <p class="lead">Click any article you want to explore.</p>
+    <hr>
+    <hr>
+    <ul>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Views</th>
+                    <th scope="col">Author</th>
+                </tr>
+            </thead>
+            {% for article in articles %}
+
+            <tbody>
+                <tr>
+                    <th scope="row">{{ loop.index }}</th>
+                    <td><a class="navbar-brand" href="/articles/{{article.id}}">{{ article.name }}</a></td>
+                    <td>{{article.views}}</td>
+                    <td><b>{{ article.author }}</b></td>
+                </tr>
+            </tbody>
+            
+            {% endfor %}
+        </table>
+    </ul>
+    <div class="conatiner">
+        <a href="/" type="button" class="btn btn-primary my-2" >BACK</a>
+    </div>
+</div>
+
+{% endblock %}
